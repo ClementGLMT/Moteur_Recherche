@@ -1,0 +1,1919 @@
+
+DATE : 2019-05-121 16:364.014
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 16:320.058
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite\bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 16:685.018
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite\bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 16:667.019
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 16:806.016
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 16:770.035
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 16:130.011
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 16:880.011
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 18:431.040
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 18:587.041
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 18:589.041
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+SQL for titre lalalatamere : select	id_film
+from	recherche_titre
+where	titre	match	lalalatamere
+
+
+
+DATE : 2019-05-121 18:839.014
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 18:733.015
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 18:734.015
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+SQL for titre  lalalatamere : select	id_film
+from	recherche_titre
+where	titre	match	lalalatamere
+
+
+
+DATE : 2019-05-121 18:80.054
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 18:968.054
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 18:968.054
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+SQL for titre  lalalatamere : select	id_film
+from	recherche_titre
+where	titre	match	lalalatamere
+
+
+
+DATE : 2019-05-121 18:480.001
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 18:370.002
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 18:373.002
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select	id_film
+from	recherche_titre
+where	titre	match	hihi ) 
+
+
+
+DATE : 2019-05-121 18:374.002
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+SQL for titre  lalalatamere : select	id_film
+from	recherche_titre
+where	titre	match	lalalatamere ) 
+
+
+
+DATE : 2019-05-121 18:25.058
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 18:22.059
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 18:24.059
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select	id_film
+from	recherche_titre
+where	titre	match	hihi )  select	<données	de	la	table	films>,	
+							group_concat(a.titre,	'|')	as	autres_titres,
+							p.prenom,	p.nom,	g.role
+from	filtre
+					join	films	f
+					on	f.id_film	=	filtre.id_film
+					join	pays	py
+					on	py.code_pays	=	f.pays
+					left	join	autres_titres	a
+					on	a.id_film	=	f.id_film
+					join	generique	g
+					on	g.id_film	=	f.id_film
+					join	personnes	p
+					on	p.id_personne	=	g.id_personne
+group	by	<données	de	la	table	films>,	p.prenom,	p.nom,	g.role
+
+
+
+DATE : 2019-05-121 18:24.059
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+SQL for titre  lalalatamere : select	id_film
+from	recherche_titre
+where	titre	match	lalalatamere ) 
+
+
+
+DATE : 2019-05-121 19:277.024
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 19:143.025
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 19:145.025
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+SQL for titre  lalalatamere : select	id_film
+from	recherche_titre
+where	titre	match	lalalatamere ) 
+
+
+
+DATE : 2019-05-121 19:742.055
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 19:597.056
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 19:655.056
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 19:633.057
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select	id_film
+from	recherche_titre
+where	titre	match	joie )  select	<données	de	la	table	films>,	
+							group_concat(a.titre,	'|')	as	autres_titres,
+							p.prenom,	p.nom,	g.role
+from	filtre
+					join	films	f
+					on	f.id_film	=	filtre.id_film
+					join	pays	py
+					on	py.code_pays	=	f.pays
+					left	join	autres_titres	a
+					on	a.id_film	=	f.id_film
+					join	generique	g
+					on	g.id_film	=	f.id_film
+					join	personnes	p
+					on	p.id_personne	=	g.id_personne
+group	by	<données	de	la	table	films>,	p.prenom,	p.nom,	g.role
+
+
+
+DATE : 2019-05-121 19:637.057
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 19:547.036
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 19:499.037
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select	id_film
+from	recherche_titre
+where	titre	match	joie )  select	f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role,	
+							group_concat(a.titre,	'|')	as	autres_titres,
+							p.prenom,	p.nom,	g.role
+from	filtre
+					join	films	f
+					on	f.id_film	=	filtre.id_film
+					join	pays	py
+					on	py.code_pays	=	f.pays
+					left	join	autres_titres	a
+					on	a.id_film	=	f.id_film
+					join	generique	g
+					on	g.id_film	=	f.id_film
+					join	personnes	p
+					on	p.id_personne	=	g.id_personne
+group	by	f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role,	p.prenom,	p.nom,	g.role
+
+
+
+DATE : 2019-05-121 19:504.037
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 19:553.013
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 19:467.014
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select	id_film
+from	recherche_titre
+where	titre	match	oiseau )  select	f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role,	
+							group_concat(a.titre,	'|')	as	autres_titres,
+							p.prenom,	p.nom,	g.role
+from	filtre
+					join	films	f
+					on	f.id_film	=	filtre.id_film
+					join	pays	py
+					on	py.code_pays	=	f.pays
+					left	join	autres_titres	a
+					on	a.id_film	=	f.id_film
+					join	generique	g
+					on	g.id_film	=	f.id_film
+					join	personnes	p
+					on	p.id_personne	=	g.id_personne
+group	by	f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role,	p.prenom,	p.nom,	g.role
+
+
+
+DATE : 2019-05-121 19:473.014
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 19:894.022
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 19:742.023
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match oiseau )  select f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres,
+ p.prenom, p.nom, g.role
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code_pays = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-121 19:746.023
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 19:751.042
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 19:677.043
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match oiseau )  select f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres,
+ p.prenom, p.nom, g.role
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code_pays = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-121 19:682.043
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 19:927.042
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 19:808.043
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match jeux )  select f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres,
+ p.prenom, p.nom, g.role
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code_pays = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-121 19:813.043
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 19:788.018
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 19:664.019
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match no )  select f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres,
+ p.prenom, p.nom, g.role
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code_pays = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-121 19:669.019
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 20:553.013
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 20:524.014
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match no )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-121 20:529.014
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 20:578.042
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 20:528.043
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match 'oiseau' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-121 20:533.043
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 20:550.002
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 20:410.003
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match 'oiseau' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-121 20:425.003
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 20:430.037
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 20:320.038
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match 'bird' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-121 20:320.038
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 20:794.055
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 20:622.056
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match 'joie' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-121 20:637.056
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 20:981.008
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 20:794.009
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match 'toi' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-121 20:809.009
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 20:851.028
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 20:773.029
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match 'roi' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-121 20:804.029
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-121 20:223.056
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-121 20:113.057
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match 'bird' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-121 20:113.057
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-122 14:794.018
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-122 14:740.019
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match 'bird' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-122 14:753.019
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 13:993.006
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 13:109.008
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( null select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 13:115.008
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 13:345.053
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 13:258.054
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match 'bird' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 13:267.054
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 13:893.040
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 13:727.041
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match 'bird pays FR' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 13:736.041
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 13:217.000
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 13:129.001
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from recherche_titre
+where titre match 'bird PAYS fr' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 13:133.001
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 13:273.016
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 13:228.017
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from films f
+join pays py
+ where (f.pays like 'fr' or py.nom like 'fr' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 13:233.017
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 13:752.030
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 13:713.031
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from films f
+join pays py
+ where (f.pays like 'fr' or py.nom like 'fr' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 13:720.031
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 13:395.027
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 13:315.028
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from films f
+join pays py
+ where (f.pays like 'fr' or py.nom like 'fr' )  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 13:318.028
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 13:348.025
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 13:202.026
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from films f
+join pays py
+ where (f.pays like 'fr' or py.nom like 'fr' ))  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 13:776.026
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 13:176.029
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 13:66.030
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : with filtre as ( select id_film
+from films f
+join pays py
+ where (f.pays like 'fr' or py.nom like 'fr' ))
+  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 13:714.030
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 13:72.022
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 13:989.024
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( select id_film
+from films f
+join pays py
+ where (f.pays like 'fr' or py.nom like 'fr' ))
+  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 13:458.025
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 13:622.039
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 13:543.040
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( select id_film
+from films f
+join pays py
+ where (f.pays like 'fr' or py.nom like 'fr' ))
+  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 13:116.041
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 14:620.055
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 14:488.056
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( select id_film
+from films f
+join pays py
+on f.pays = py.code
+where (f.pays like 'france' or py.nom like 'france' ))
+  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, 
+ group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 14:508.056
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 14:829.006
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 14:702.007
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	join pays py
+	on f.pays = py.code
+	where (f.pays like 'france' or py.nom like 'france' ))
+  select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+ join films f
+ on f.id_film = filtre.id_film
+ join pays py
+ on py.code = f.pays
+ left join autres_titres a
+ on a.id_film = f.id_film
+ join generique g
+ on g.id_film = f.id_film
+ join personnes p
+ on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 14:713.007
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 14:262.059
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 14:141.000
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	join pays py
+	on f.pays = py.code
+	where (f.pays like 'france' or py.nom like 'france' ))
+ select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 14:155.000
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 14:683.039
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 14:749.040
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	join pays py
+	on f.pays = py.code
+	where (f.pays like 'france' or py.nom like 'france' )
+)
+ select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 14:759.040
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 14:234.006
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 14:254.007
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	join pays py
+	on py.code = f.pays
+	where (f.pays like 'france' or py.nom like 'france' )
+)
+ select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 14:290.007
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 14:133.039
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 14:95.040
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	inner join pays py
+	on py.code = f.pays
+	where (f.pays like 'france' or py.nom like 'france' )
+)
+ select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 14:109.040
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 15:958.017
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 15:811.018
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match 'oiseau' 
+)  intersect 	select id_film
+	from films f
+	inner join pays py
+	on py.code = f.pays
+	where (f.pays like 'france' or py.nom like 'france' )
+)
+ select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 15:817.018
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 15:450.033
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 15:316.034
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	inner join pays py
+	on py.code = f.pays
+	where (f.pays like 'france' or py.nom like 'france' )
+)
+ select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 15:333.034
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 15:592.026
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 15:470.027
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	inner join pays py
+	on py.code = f.pays
+	where (f.pays like 'france' or py.nom like 'france' )
+)
+ select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 15:512.027
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+Film 1 : 80Le Pacte des loupsBrotherhood of the Wolf2001FranceChristopheGansRBrotherhood of the Wolf
+
+
+
+DATE : 2019-05-125 15:520.027
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 15:359.028
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 15:525.029
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	inner join pays py
+	on py.code = f.pays
+	where (f.pays like 'france' or py.nom like 'france' )
+)
+ select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 15:645.029
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 15:283.056
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 15:183.057
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match 'in' 
+)  intersect 	select id_film
+	from films f
+	inner join pays py
+	on py.code = f.pays
+	where (f.pays like 'france' or py.nom like 'france' )
+)
+ select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 15:187.057
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 15:235.022
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 15:113.023
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	where f.annee = 1999 )
+)
+select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 15:116.023
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 15:132.030
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 15:125.031
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	where f.annee = 1999 
+)
+select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 15:210.031
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
