@@ -1917,3 +1917,7190 @@ MESSAGE :
 Connection closed
 
 
+
+DATE : 2019-05-125 17:306.050
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 17:85.037
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 17:02.048
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 17:409.036
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 17:226.056
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 17:490.058
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 17:49.000
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 17:935.000
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'R'
+		and (
+			(p.nom_sans_accent like 'Charlie' and p.prenom_sans_accent like ('Chaplin' || '%'))
+			or
+			p.nom_sans_accent like 'Chaplin' and p.prenom_sans_accent like ('Charlie' || '%'))
+		)
+)
+)
+select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 17:941.000
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 17:784.007
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 17:734.008
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'R'
+		and (
+			(p.nom_sans_accent like 'Charlie' and p.prenom_sans_accent like ('Chaplin' || '%'))
+			or
+			p.nom_sans_accent like 'Chaplin' and p.prenom_sans_accent like ('Charlie' || '%'))
+		)
+)
+select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 17:740.008
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 17:952.043
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 17:825.044
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'R'
+		and (
+			(p.nom_sans_accent like 'Charlie' and p.prenom_sans_accent like ('Chaplin' || '%'))
+			or
+			p.nom_sans_accent like 'Chaplin' and p.prenom_sans_accent like ('Charlie' || '%'))
+		)
+)
+select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 17:832.044
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 17:825.011
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 17:739.012
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'R'
+		and (
+			(p.nom_sans_accent like 'Charlie' and p.prenom_sans_accent like ('Chaplin' || '%'))
+			or
+			(p.nom_sans_accent like 'Chaplin' and p.prenom_sans_accent like ('Charlie' || '%'))
+		)
+)
+select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 17:746.012
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 17:349.037
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 17:240.038
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select f.id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'R'
+		and (
+			(p.nom_sans_accent like 'Charlie' and p.prenom_sans_accent like ('Chaplin' || '%'))
+			or
+			(p.nom_sans_accent like 'Chaplin' and p.prenom_sans_accent like ('Charlie' || '%'))
+		)
+)
+select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 17:292.038
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 17:695.023
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 17:527.024
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+null)
+select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 17:532.024
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 17:445.052
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 17:264.053
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [C]
+
+
+
+DATE : 2019-05-125 17:265.053
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [C, Tommy]
+
+
+
+DATE : 2019-05-125 17:266.053
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [C, Tommy, Lee]
+
+
+
+DATE : 2019-05-125 17:266.053
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [C, Tommy, Lee, Jones]
+
+
+
+DATE : 2019-05-125 17:268.053
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+null)
+select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 17:273.053
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 18:616.026
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-125 18:471.027
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [Tommy]
+
+
+
+DATE : 2019-05-125 18:471.027
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [Tommy, Lee]
+
+
+
+DATE : 2019-05-125 18:471.027
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [Tommy, Lee, Jones]
+
+
+
+DATE : 2019-05-125 18:508.027
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select f.id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'A'
+		and (
+			(
+				(p.nom_sans_accent like 'Tommy Lee' and p.prenom_sans_accent like ('Jones' || '%'))
+				or
+				(p.nom_sans_accent like 'Jones' and p.prenom_sans_accent like ('Tommy Lee' || '%'))
+			)
+			or
+			(
+				(p.nom_sans_accent like 'Tommy' and p.prenom_sans_accent like ('Lee Jones' || '%'))
+				or
+				(p.nom_sans_accent like 'Lee Jones' and p.prenom_sans_accent like ('Tommy' || '%'))			)
+		)
+)
+select f.id_film, f.titre, a.titre, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-125 18:593.027
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-125 18:418.037
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-131 19:186.033
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-131 19:879.033
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-131 19:111.006
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-131 19:130.007
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+null)
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-131 19:850.020
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-131 19:840.021
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+null)
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:276.006
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:52.007
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+null)
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:69.053
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:814.053
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:72.017
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:713.017
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE
+
+
+
+DATE : 2019-05-133 15:714.017
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:130.000
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:770.000
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 15:771.000
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:773.000
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ''?'')
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:912.051
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:565.052
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 15:567.052
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:568.052
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ''?'')
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:945.025
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:612.026
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 15:613.026
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:614.026
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ''?'')
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:564.030
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:232.031
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 15:234.031
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:236.031
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ''?'')
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:999.049
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:631.050
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 15:633.050
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:353.049
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:98.050
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 15:98.050
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:100.050
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ''?'')
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:219.033
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:937.033
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 15:939.033
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:942.033
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-133 15:944.033
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ''?'')
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:874.049
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:597.050
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 15:599.050
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:600.050
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-133 15:602.050
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-133 15:602.050
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ''?'')
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:89.047
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:808.047
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 15:810.047
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:811.047
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-133 15:813.047
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-133 15:814.047
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ''?'')
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:817.047
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : []
+
+
+
+DATE : 2019-05-133 15:399.045
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:164.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 15:165.046
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:166.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-133 15:168.046
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-133 15:169.046
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ''?'')
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:172.046
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-133 15:512.033
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:821.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 15:823.034
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:825.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-133 15:828.034
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-133 15:837.034
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ''?'')
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:840.034
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-133 15:211.032
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:13.033
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 15:15.033
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:17.033
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-133 15:20.033
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-133 15:26.033
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ?)
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:29.033
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-133 15:215.024
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 15:10.025
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 15:12.025
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 15:13.025
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-133 15:15.025
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-133 15:16.025
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ?)
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 15:20.025
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-133 15:49.025
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-133 16:934.007
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 16:909.008
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = djqidj
+
+
+
+DATE : 2019-05-133 16:912.008
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+null)
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:912.008
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : []
+
+
+
+DATE : 2019-05-133 16:204.031
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 16:38.032
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = DE hitchcock
+
+
+
+DATE : 2019-05-133 16:40.032
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [hitchcock]
+
+
+
+DATE : 2019-05-133 16:41.032
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+null)
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:46.032
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : []
+
+
+
+DATE : 2019-05-133 16:943.045
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 16:667.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE oiseau
+
+
+
+DATE : 2019-05-133 16:668.046
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 16:669.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : oiseau
+
+
+
+DATE : 2019-05-133 16:671.046
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = oiseau
+
+
+
+DATE : 2019-05-133 16:674.046
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ?)
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:679.046
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [oiseau]
+
+
+
+DATE : 2019-05-133 16:709.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : oiseau
+
+
+
+DATE : 2019-05-133 16:842.001
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 16:662.002
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE oiseau
+
+
+
+DATE : 2019-05-133 16:663.002
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 16:665.002
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : oiseau
+
+
+
+DATE : 2019-05-133 16:675.002
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = oiseau
+
+
+
+DATE : 2019-05-133 16:681.002
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ?)
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:685.002
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [oiseau]
+
+
+
+DATE : 2019-05-133 16:713.002
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : oiseau
+
+
+
+DATE : 2019-05-133 16:720.002
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ?)
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:556.012
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 16:516.013
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE oiseau
+
+
+
+DATE : 2019-05-133 16:517.013
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 16:519.013
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : oiseau
+
+
+
+DATE : 2019-05-133 16:521.013
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = oiseau
+
+
+
+DATE : 2019-05-133 16:523.013
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:528.013
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [oiseau]
+
+
+
+DATE : 2019-05-133 16:562.013
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : oiseau
+
+
+
+DATE : 2019-05-133 16:566.013
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:955.031
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 16:796.032
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-133 16:797.032
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 16:800.032
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-133 16:802.032
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-133 16:805.032
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:808.032
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-133 16:842.032
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-133 16:844.032
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:487.052
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 16:280.053
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE oiseau
+
+
+
+DATE : 2019-05-133 16:282.053
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 16:285.053
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : oiseau
+
+
+
+DATE : 2019-05-133 16:287.053
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = oiseau
+
+
+
+DATE : 2019-05-133 16:293.053
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:296.053
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [oiseau]
+
+
+
+DATE : 2019-05-133 16:329.053
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : oiseau
+
+
+
+DATE : 2019-05-133 16:335.053
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:616.041
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 16:246.042
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE oiseau
+
+
+
+DATE : 2019-05-133 16:248.042
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 16:249.042
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : oiseau
+
+
+
+DATE : 2019-05-133 16:250.042
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = oiseau
+
+
+
+DATE : 2019-05-133 16:253.042
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:255.042
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [oiseau]
+
+
+
+DATE : 2019-05-133 16:272.042
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : oiseau
+
+
+
+DATE : 2019-05-133 16:273.042
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:732.009
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-133 16:386.010
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE oiseau
+
+
+
+DATE : 2019-05-133 16:388.010
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-133 16:389.010
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : oiseau
+
+
+
+DATE : 2019-05-133 16:390.010
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = oiseau
+
+
+
+DATE : 2019-05-133 16:392.010
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-133 16:393.010
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [oiseau]
+
+
+
+DATE : 2019-05-133 16:413.010
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : oiseau
+
+
+
+DATE : 2019-05-133 16:414.010
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, a.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, a.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 14:894.035
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 14:747.036
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 14:748.036
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 14:749.036
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 14:750.036
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 14:752.036
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 14:753.036
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 14:777.036
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-137 14:779.036
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 14:794.033
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 14:508.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 14:509.034
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 14:511.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 14:513.034
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 14:516.034
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 14:519.034
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 14:550.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-137 14:552.034
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-137 14:929.014
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 14:698.015
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 14:699.015
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 14:701.015
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 14:704.015
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 14:706.015
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 14:709.015
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 14:736.015
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-137 14:738.015
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-137 15:143.021
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 15:803.021
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 15:804.021
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 15:806.021
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 15:808.021
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 15:810.021
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 15:815.021
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 15:840.021
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-137 15:842.021
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@2fd66ad3
+
+
+
+DATE : 2019-05-137 15:428.044
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 15:39.045
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 15:41.045
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 15:42.045
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 15:44.045
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 15:46.045
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 15:49.045
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 15:76.045
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-137 15:79.045
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-137 15:392.019
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 15:161.020
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 15:162.020
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 15:164.020
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 15:165.020
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 15:169.020
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 15:171.020
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 15:201.020
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-137 15:203.020
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-137 15:772.034
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 15:530.035
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 15:531.035
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 15:533.035
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 15:534.035
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 15:538.035
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 15:541.035
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 15:576.035
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-137 15:579.035
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-137 15:855.056
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 15:531.057
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE oiseau
+
+
+
+DATE : 2019-05-137 15:532.057
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 15:534.057
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : oiseau
+
+
+
+DATE : 2019-05-137 15:536.057
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = oiseau
+
+
+
+DATE : 2019-05-137 15:539.057
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on f.pays = py.code
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 15:542.057
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [oiseau]
+
+
+
+DATE : 2019-05-137 15:572.057
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : oiseau
+
+
+
+DATE : 2019-05-137 15:575.057
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-137 15:359.001
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 15:988.001
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 15:989.001
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 15:991.001
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 15:992.001
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 15:994.001
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 15:996.001
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 15:17.002
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-137 15:18.002
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-137 15:634.036
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 15:351.037
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 15:352.037
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 15:354.037
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 15:356.037
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 15:358.037
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code = f.pays
+left join autres_titres a
+on a.id_film = f.id_film
+join generique g
+on g.id_film = f.id_film
+join personnes p
+on p.id_personne = g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 15:361.037
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 15:387.037
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-137 15:389.037
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-137 15:953.043
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 15:668.044
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 15:670.044
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 15:671.044
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 15:673.044
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 15:676.044
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 15:678.044
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 15:709.044
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-137 15:711.044
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-137 15:673.030
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 15:295.031
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 15:298.031
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 15:303.031
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 15:307.031
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 15:310.031
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( 
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 15:315.031
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 15:340.031
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-137 15:343.031
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-137 15:208.035
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 15:828.035
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 15:830.035
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 15:831.035
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 15:833.035
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 15:835.035
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 15:837.035
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 15:869.035
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg0 : vol
+
+
+
+DATE : 2019-05-137 16:267.048
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 16:812.048
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 16:812.048
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 16:813.048
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 16:814.048
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 16:815.048
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 16:816.048
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 16:832.048
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-137 16:833.048
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-137 16:400.011
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 16:119.012
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = zefjaz
+
+
+
+DATE : 2019-05-137 16:122.012
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( select id_film from recherche_titre where titre match vol )
+null )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 16:124.012
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : []
+
+
+
+DATE : 2019-05-137 16:91.021
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 16:111.022
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = jsef
+
+
+
+DATE : 2019-05-137 16:115.022
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( select id_film from recherche_titre where titre match vol )
+ )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 16:118.022
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : []
+
+
+
+DATE : 2019-05-137 16:582.052
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 16:240.053
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = azuhd
+
+
+
+DATE : 2019-05-137 16:241.053
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( select id_film from recherche_titre where titre match vol )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 16:243.053
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : []
+
+
+
+DATE : 2019-05-137 16:855.036
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 16:598.037
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = sef
+
+
+
+DATE : 2019-05-137 16:600.037
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( select id_film from recherche_titre where titre match 'vol' )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 16:602.037
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : []
+
+
+
+DATE : 2019-05-137 16:610.037
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@481a15ff
+
+
+
+DATE : 2019-05-137 16:808.051
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 16:537.052
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = dth
+
+
+
+DATE : 2019-05-137 16:540.052
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( select id_film from recherche_titre where titre match 'vol' )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 16:542.052
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : []
+
+
+
+DATE : 2019-05-137 16:545.052
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4Statement@3578436e
+
+
+
+DATE : 2019-05-137 16:241.004
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 16:846.004
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = sqjdh
+
+
+
+DATE : 2019-05-137 16:848.004
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( select id_film from recherche_titre where titre match 'vol' )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 16:850.004
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : []
+
+
+
+DATE : 2019-05-137 16:852.004
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4Statement@3578436e
+
+
+
+DATE : 2019-05-137 16:935.036
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 16:614.037
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = gdfb
+
+
+
+DATE : 2019-05-137 16:615.037
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( select id_film from recherche_titre where titre match 'vol' )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 16:618.037
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : []
+
+
+
+DATE : 2019-05-137 16:620.037
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4Statement@3578436e
+
+
+
+DATE : 2019-05-137 16:526.055
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 16:176.056
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = hg
+
+
+
+DATE : 2019-05-137 16:178.056
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as ( select id_film from recherche_titre where titre match 'vol' )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 16:181.056
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : []
+
+
+
+DATE : 2019-05-137 16:183.056
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4Statement@2eda0940
+
+
+
+DATE : 2019-05-137 16:185.056
+CATEGORY : qzdbh
+LEVEL : INFO
+MESSAGE :
+Schema : null
+
+
+
+DATE : 2019-05-137 16:949.056
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 16:712.057
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE hihi
+
+
+
+DATE : 2019-05-137 16:713.057
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 16:715.057
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : hihi
+
+
+
+DATE : 2019-05-137 16:718.057
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = hihi
+
+
+
+DATE : 2019-05-137 16:721.057
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ?select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 16:723.057
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [hihi]
+
+
+
+DATE : 2019-05-137 16:697.033
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-137 16:408.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-137 16:410.034
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-137 16:412.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-137 16:414.034
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-137 16:416.034
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-137 16:419.034
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-137 16:447.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-137 16:449.034
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@2fd66ad3
+
+
+
+DATE : 2019-05-137 16:451.034
+CATEGORY : qzdbh
+LEVEL : INFO
+MESSAGE :
+Schema : null
+
+
+
+DATE : 2019-05-141 10:819.059
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 10:518.000
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = gh
+
+
+
+DATE : 2019-05-141 10:520.000
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+null )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 10:520.000
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : []
+
+
+
+DATE : 2019-05-141 10:527.000
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+Select * from pays
+
+
+
+DATE : 2019-05-141 10:530.000
+CATEGORY : qzdbh
+LEVEL : INFO
+MESSAGE :
+Schema : null
+
+
+
+DATE : 2019-05-141 10:555.000
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-141 10:875.030
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 10:611.031
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-141 10:613.031
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 10:614.031
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 10:615.031
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 10:616.031
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 10:618.031
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 10:638.031
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-141 10:639.031
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-141 10:640.031
+CATEGORY : qzdbh
+LEVEL : INFO
+MESSAGE :
+Schema : null
+
+
+
+DATE : 2019-05-141 10:856.007
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 10:600.008
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-141 10:602.008
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 10:604.008
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 10:606.008
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 10:607.008
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 10:633.008
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-141 10:636.008
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-141 10:780.045
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 10:410.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-141 10:411.046
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 10:413.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 10:414.046
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 10:416.046
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 10:442.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-141 10:445.046
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+org.sqlite.jdbc4.JDBC4PreparedStatement@5d11346a
+
+
+
+DATE : 2019-05-141 10:252.003
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 10:425.004
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-141 10:426.004
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 10:427.004
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 10:429.004
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 10:430.004
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 10:455.004
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-141 10:456.004
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 11:473.026
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 11:179.027
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-141 11:181.027
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 11:183.027
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 11:184.027
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 11:188.027
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 11:196.027
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 11:606.018
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 11:276.019
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-141 11:278.019
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 11:279.019
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 11:281.019
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 11:284.019
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 11:297.019
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 11:32.057
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 11:927.057
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-141 11:927.057
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 11:934.057
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 11:938.057
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 11:942.057
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 11:995.057
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-141 11:00.058
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 11:459.001
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 11:152.002
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-141 11:154.002
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 11:155.002
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 11:157.002
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 11:159.002
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 11:182.002
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-141 11:182.002
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 11:200.002
+CATEGORY : djz
+LEVEL : INFO
+MESSAGE :
+{"titre":"hello","realisateurs":["zblu Guigui"],"acteurs":["zblui Guigui"],"pays":"france","annee":1998,"duree":"1h55mn","autres titres":["AKIKI"]}
+
+
+
+DATE : 2019-05-141 11:201.002
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-141 11:873.037
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 11:596.038
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-141 11:597.038
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 11:598.038
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 11:600.038
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 11:602.038
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 11:616.038
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-141 11:632.038
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 11:633.038
+CATEGORY : djz
+LEVEL : INFO
+MESSAGE :
+{"titre":"hello","realisateurs":[],"acteurs":[],"pays":"france","annee":1998,"duree":"1h55mn","autres titres":[]}
+
+
+
+DATE : 2019-05-141 11:640.038
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-141 11:258.007
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 11:893.007
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-141 11:894.007
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 11:896.007
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 11:897.007
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 11:899.007
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 11:928.007
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-141 11:929.007
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 11:934.007
+CATEGORY : djz
+LEVEL : INFO
+MESSAGE :
+{"titre":"null","realisateurs":[],"acteurs":[],"pays":"null","annee":0,"duree":null,"autres titres":[]}
+
+
+
+DATE : 2019-05-141 11:935.007
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-141 11:906.005
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 11:709.006
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-141 11:712.006
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 11:714.006
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 11:716.006
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 11:720.006
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 11:760.006
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-141 11:766.006
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 11:771.006
+CATEGORY : jdj
+LEVEL : INFO
+MESSAGE :
+{"titre":"hello","realisateurs":[],"acteurs":[],"pays":"france","annee":1998,"duree":"1h55mn","autres titres":[]}
+
+
+
+DATE : 2019-05-141 11:781.006
+CATEGORY : jdj
+LEVEL : INFO
+MESSAGE :
+{"titre":"nulos","realisateurs":[],"acteurs":[],"pays":"null","annee":12,"duree":null,"autres titres":[]}
+
+
+
+DATE : 2019-05-141 11:783.006
+CATEGORY : jdj
+LEVEL : INFO
+MESSAGE :
+{"titre":"ololo","realisateurs":[],"acteurs":[],"pays":"null","annee":12,"duree":null,"autres titres":[]}
+
+
+
+DATE : 2019-05-141 11:787.006
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-141 12:175.029
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 12:722.029
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-141 12:722.029
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 12:722.029
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 12:738.029
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 12:738.029
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 12:753.029
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-141 12:753.029
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 12:753.029
+CATEGORY : jdj
+LEVEL : INFO
+MESSAGE :
+{"titre":"hello","realisateurs":[],"acteurs":[],"pays":"france","annee":1998,"duree":"1h55mn","autres titres":[]}
+
+
+
+DATE : 2019-05-141 12:753.029
+CATEGORY : jdj
+LEVEL : INFO
+MESSAGE :
+{"titre":"nulos","realisateurs":[],"acteurs":[],"pays":"null","annee":12,"duree":null,"autres titres":[]}
+
+
+
+DATE : 2019-05-141 12:753.029
+CATEGORY : jdj
+LEVEL : INFO
+MESSAGE :
+{"titre":"ololo","realisateurs":[],"acteurs":[],"pays":"null","annee":12,"duree":null,"autres titres":[]}
+
+
+
+DATE : 2019-05-141 12:753.029
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-141 13:765.028
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:450.029
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol
+
+
+
+DATE : 2019-05-141 13:451.029
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:452.029
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 13:453.029
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 13:455.029
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 13:472.029
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-141 13:474.029
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 13:480.029
+CATEGORY : jdj
+LEVEL : INFO
+MESSAGE :
+{"titre":"hello","realisateurs":[],"acteurs":[],"pays":"france","annee":1998,"duree":"1h55mn","autres titres":[]}
+
+
+
+DATE : 2019-05-141 13:481.029
+CATEGORY : jdj
+LEVEL : INFO
+MESSAGE :
+{"titre":"nulos","realisateurs":[],"acteurs":[],"pays":"null","annee":12,"duree":null,"autres titres":[]}
+
+
+
+DATE : 2019-05-141 13:482.029
+CATEGORY : jdj
+LEVEL : INFO
+MESSAGE :
+{"titre":"ololo","realisateurs":[],"acteurs":[],"pays":"null","annee":12,"duree":null,"autres titres":[]}
+
+
+
+DATE : 2019-05-141 13:483.029
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-141 13:992.005
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:544.006
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol, AVEC bebou
+
+
+
+DATE : 2019-05-141 13:545.006
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:546.006
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 13:548.006
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 13:549.006
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [bebou]
+
+
+
+DATE : 2019-05-141 13:552.006
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 13:697.030
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:236.031
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol, AVEC bebou
+
+
+
+DATE : 2019-05-141 13:238.031
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:239.031
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 13:240.031
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 13:241.031
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [bebou]
+
+
+
+DATE : 2019-05-141 13:242.031
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 13:926.030
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:490.031
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol, AVEC bebou
+
+
+
+DATE : 2019-05-141 13:491.031
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:492.031
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 13:494.031
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 13:495.031
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+AVEC found
+
+
+
+DATE : 2019-05-141 13:496.031
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [bebou]
+
+
+
+DATE : 2019-05-141 13:497.031
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 13:967.005
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:515.006
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol, AVEC bebou
+
+
+
+DATE : 2019-05-141 13:520.006
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Number of statements : 2
+
+
+
+DATE : 2019-05-141 13:523.006
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:525.006
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 13:525.006
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 13:526.006
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+AVEC found
+
+
+
+DATE : 2019-05-141 13:527.006
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [bebou]
+
+
+
+DATE : 2019-05-141 13:528.006
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol]
+
+
+
+DATE : 2019-05-141 13:956.049
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:507.050
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol, AVEC bebou lola
+
+
+
+DATE : 2019-05-141 13:512.050
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Number of statements : 2
+
+
+
+DATE : 2019-05-141 13:513.050
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:514.050
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 13:515.050
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 13:516.050
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+AVEC found
+
+
+
+DATE : 2019-05-141 13:517.050
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [bebou]
+
+
+
+DATE : 2019-05-141 13:517.050
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [bebou, lola]
+
+
+
+DATE : 2019-05-141 13:521.050
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol, bebou, lola, lola, bebou]
+
+
+
+DATE : 2019-05-141 13:534.050
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-141 13:535.050
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg3 : lola
+
+
+
+DATE : 2019-05-141 13:536.050
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg5 : bebou
+
+
+
+DATE : 2019-05-141 13:536.050
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? intersect 	select f.id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'A'
+		and (
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+			or
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+		)
+ )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 13:978.007
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:528.008
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE vol, AVEC bebou hihi
+
+
+
+DATE : 2019-05-141 13:533.008
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Number of statements : 2
+
+
+
+DATE : 2019-05-141 13:534.008
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:536.008
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : vol
+
+
+
+DATE : 2019-05-141 13:537.008
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = vol
+
+
+
+DATE : 2019-05-141 13:538.008
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+AVEC found
+
+
+
+DATE : 2019-05-141 13:539.008
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [bebou]
+
+
+
+DATE : 2019-05-141 13:540.008
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [bebou, hihi]
+
+
+
+DATE : 2019-05-141 13:544.008
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [vol, bebou, hihi, hihi, bebou]
+
+
+
+DATE : 2019-05-141 13:558.008
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : vol
+
+
+
+DATE : 2019-05-141 13:558.008
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg2 : bebou
+
+
+
+DATE : 2019-05-141 13:559.008
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg3 : hihi
+
+
+
+DATE : 2019-05-141 13:560.008
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg4 : hihi
+
+
+
+DATE : 2019-05-141 13:560.008
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg5 : bebou
+
+
+
+DATE : 2019-05-141 13:561.008
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ? intersect 	select f.id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'A'
+		and (
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+			or
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+		)
+ )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 13:618.008
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Request executed
+
+
+
+DATE : 2019-05-141 13:622.008
+CATEGORY : jdj
+LEVEL : INFO
+MESSAGE :
+{"titre":"hello","realisateurs":[],"acteurs":[],"pays":"france","annee":1998,"duree":"1h55mn","autres titres":[]}
+
+
+
+DATE : 2019-05-141 13:623.008
+CATEGORY : jdj
+LEVEL : INFO
+MESSAGE :
+{"titre":"nulos","realisateurs":[],"acteurs":[],"pays":"null","annee":12,"duree":null,"autres titres":[]}
+
+
+
+DATE : 2019-05-141 13:623.008
+CATEGORY : jdj
+LEVEL : INFO
+MESSAGE :
+{"titre":"ololo","realisateurs":[],"acteurs":[],"pays":"null","annee":12,"duree":null,"autres titres":[]}
+
+
+
+DATE : 2019-05-141 13:625.008
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-141 13:84.022
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:653.022
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE roi, AVEC jeff bridges
+
+
+
+DATE : 2019-05-141 13:658.022
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Number of statements : 2
+
+
+
+DATE : 2019-05-141 13:659.022
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:661.022
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : roi
+
+
+
+DATE : 2019-05-141 13:662.022
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = roi
+
+
+
+DATE : 2019-05-141 13:663.022
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+AVEC found
+
+
+
+DATE : 2019-05-141 13:664.022
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [jeff]
+
+
+
+DATE : 2019-05-141 13:664.022
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [jeff, bridges]
+
+
+
+DATE : 2019-05-141 13:673.022
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [roi, jeff, bridges, bridges, jeff]
+
+
+
+DATE : 2019-05-141 13:688.022
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : roi
+
+
+
+DATE : 2019-05-141 13:689.022
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg2 : jeff
+
+
+
+DATE : 2019-05-141 13:690.022
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg3 : bridges
+
+
+
+DATE : 2019-05-141 13:690.022
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg4 : bridges
+
+
+
+DATE : 2019-05-141 13:691.022
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg5 : jeff
+
+
+
+DATE : 2019-05-141 13:692.022
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ?
+intersect
+	select f.id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'A'
+		and (
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+			or
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+		)
+ )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 13:714.022
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Request executed
+
+
+
+DATE : 2019-05-141 13:202.005
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:767.005
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE roi, AVEC hihi
+
+
+
+DATE : 2019-05-141 13:772.005
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Number of statements : 2
+
+
+
+DATE : 2019-05-141 13:773.005
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:774.005
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : roi
+
+
+
+DATE : 2019-05-141 13:776.005
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = roi
+
+
+
+DATE : 2019-05-141 13:777.005
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+AVEC found
+
+
+
+DATE : 2019-05-141 13:778.005
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [hihi]
+
+
+
+DATE : 2019-05-141 13:779.005
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [roi]
+
+
+
+DATE : 2019-05-141 13:954.019
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:512.020
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE roi, AVEC bebou
+
+
+
+DATE : 2019-05-141 13:517.020
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Number of statements : 2
+
+
+
+DATE : 2019-05-141 13:518.020
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:520.020
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : roi
+
+
+
+DATE : 2019-05-141 13:521.020
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = roi
+
+
+
+DATE : 2019-05-141 13:522.020
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+AVEC found
+
+
+
+DATE : 2019-05-141 13:523.020
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [bebou]
+
+
+
+DATE : 2019-05-141 13:528.020
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [roi, bebou]
+
+
+
+DATE : 2019-05-141 13:377.019
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:939.019
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE roi, AVEC hihi
+
+
+
+DATE : 2019-05-141 13:945.019
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Number of statements : 2
+
+
+
+DATE : 2019-05-141 13:946.019
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:947.019
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : roi
+
+
+
+DATE : 2019-05-141 13:948.019
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = roi
+
+
+
+DATE : 2019-05-141 13:949.019
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+AVEC found
+
+
+
+DATE : 2019-05-141 13:950.019
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [hihi]
+
+
+
+DATE : 2019-05-141 13:954.019
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [roi, hihi]
+
+
+
+DATE : 2019-05-141 13:479.023
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:22.024
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE roi, AVEC hihi
+
+
+
+DATE : 2019-05-141 13:28.024
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Number of statements : 2
+
+
+
+DATE : 2019-05-141 13:29.024
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:30.024
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : roi
+
+
+
+DATE : 2019-05-141 13:31.024
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = roi
+
+
+
+DATE : 2019-05-141 13:32.024
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+AVEC found
+
+
+
+DATE : 2019-05-141 13:33.024
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [hihi]
+
+
+
+DATE : 2019-05-141 13:38.024
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [roi, hihi]
+
+
+
+DATE : 2019-05-141 13:52.024
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : roi
+
+
+
+DATE : 2019-05-141 13:53.024
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg2 : hihi
+
+
+
+DATE : 2019-05-141 13:54.024
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ?
+intersect
+	select f.id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'A'
+		and (
+			p.nom_sans_accent like ?		)
+ )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 13:75.024
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Request executed
+
+
+
+DATE : 2019-05-141 13:78.024
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-141 13:780.045
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:333.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE roi, AVEC jeff bridges
+
+
+
+DATE : 2019-05-141 13:338.046
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Number of statements : 2
+
+
+
+DATE : 2019-05-141 13:339.046
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:341.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : roi
+
+
+
+DATE : 2019-05-141 13:342.046
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = roi
+
+
+
+DATE : 2019-05-141 13:343.046
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+AVEC found
+
+
+
+DATE : 2019-05-141 13:344.046
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [jeff]
+
+
+
+DATE : 2019-05-141 13:344.046
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [jeff, bridges]
+
+
+
+DATE : 2019-05-141 13:349.046
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [roi, jeff, bridges, bridges, jeff]
+
+
+
+DATE : 2019-05-141 13:364.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : roi
+
+
+
+DATE : 2019-05-141 13:365.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg2 : jeff
+
+
+
+DATE : 2019-05-141 13:366.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg3 : bridges
+
+
+
+DATE : 2019-05-141 13:366.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg4 : bridges
+
+
+
+DATE : 2019-05-141 13:367.046
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg5 : jeff
+
+
+
+DATE : 2019-05-141 13:368.046
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ?
+intersect
+	select f.id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'A'
+		and (
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+			or
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+		)
+ )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 13:392.046
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Request executed
+
+
+
+DATE : 2019-05-141 13:86.028
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 13:820.028
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE roi, DE speil
+
+
+
+DATE : 2019-05-141 13:826.028
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Number of statements : 2
+
+
+
+DATE : 2019-05-141 13:828.028
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 13:830.028
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : roi
+
+
+
+DATE : 2019-05-141 13:833.028
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = roi
+
+
+
+DATE : 2019-05-141 13:836.028
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+DE found
+
+
+
+DATE : 2019-05-141 13:837.028
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [speil]
+
+
+
+DATE : 2019-05-141 13:846.028
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [roi, speil]
+
+
+
+DATE : 2019-05-141 13:861.028
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : roi
+
+
+
+DATE : 2019-05-141 13:862.028
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg2 : speil
+
+
+
+DATE : 2019-05-141 13:865.028
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ?
+intersect
+	select f.id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'R'
+		and (
+			p.nom_sans_accent like ?		)
+ )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 13:875.028
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Request executed
+
+
+
+DATE : 2019-05-141 13:881.028
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+Connection closed
+
+
+
+DATE : 2019-05-141 14:337.034
+CATEGORY : JDBC
+LEVEL : INFO
+MESSAGE :
+JDBC URL : jdbc:sqlite:C:\Projet_Genie_Logiciel\bdfilm.sqlite
+
+
+
+DATE : 2019-05-141 14:339.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE roi, AVEC jeff bridges
+
+
+
+DATE : 2019-05-141 14:339.034
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Number of statements : 2
+
+
+
+DATE : 2019-05-141 14:340.034
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 14:341.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : roi
+
+
+
+DATE : 2019-05-141 14:342.034
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = roi
+
+
+
+DATE : 2019-05-141 14:343.034
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+AVEC found
+
+
+
+DATE : 2019-05-141 14:344.034
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [jeff]
+
+
+
+DATE : 2019-05-141 14:345.034
+CATEGORY : Test
+LEVEL : INFO
+MESSAGE :
+Tableau de noms : [jeff, bridges]
+
+
+
+DATE : 2019-05-141 14:346.034
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+vars : [roi, jeff, bridges, bridges, jeff]
+
+
+
+DATE : 2019-05-141 14:347.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 : roi
+
+
+
+DATE : 2019-05-141 14:348.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg2 : jeff
+
+
+
+DATE : 2019-05-141 14:348.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg3 : bridges
+
+
+
+DATE : 2019-05-141 14:349.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg4 : bridges
+
+
+
+DATE : 2019-05-141 14:350.034
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg5 : jeff
+
+
+
+DATE : 2019-05-141 14:351.034
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ?
+intersect
+	select f.id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'A'
+		and (
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+			or
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+		)
+ )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 14:373.034
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Request executed
+
+
+
+DATE : 2019-05-141 14:469.052
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE roi, AVEC jeff bridges
+
+
+
+DATE : 2019-05-141 14:502.052
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Number of statements : 2
+
+
+
+DATE : 2019-05-141 14:504.052
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 14:507.052
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+info : roi
+
+
+
+DATE : 2019-05-141 14:509.052
+CATEGORY : jsdhsuihZEGFBQZEYVFA3YOU
+LEVEL : INFO
+MESSAGE :
+vars = roi
+
+
+
+DATE : 2019-05-141 14:509.052
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+AVEC found
+
+
+
+DATE : 2019-05-141 14:515.052
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+values found : [roi, jeff, bridges, bridges, jeff]
+
+
+
+DATE : 2019-05-141 14:530.052
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 passed to PrepStat: roi
+
+
+
+DATE : 2019-05-141 14:531.052
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg2 passed to PrepStat: jeff
+
+
+
+DATE : 2019-05-141 14:532.052
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg3 passed to PrepStat: bridges
+
+
+
+DATE : 2019-05-141 14:532.052
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg4 passed to PrepStat: bridges
+
+
+
+DATE : 2019-05-141 14:533.052
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg5 passed to PrepStat: jeff
+
+
+
+DATE : 2019-05-141 14:534.052
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ?
+intersect
+	select f.id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'A'
+		and (
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+			or
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+		)
+ )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 14:557.052
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Request executed
+
+
+
+DATE : 2019-05-141 14:459.051
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+request = TITRE ROI, AVEC JEFF BRIDGES
+
+
+
+DATE : 2019-05-141 14:492.051
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Number of statements : 2
+
+
+
+DATE : 2019-05-141 14:493.051
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+TITRE found
+
+
+
+DATE : 2019-05-141 14:494.051
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+AVEC found
+
+
+
+DATE : 2019-05-141 14:497.051
+CATEGORY : ,fjn
+LEVEL : INFO
+MESSAGE :
+values found : [ROI, JEFF, BRIDGES, BRIDGES, JEFF]
+
+
+
+DATE : 2019-05-141 14:510.051
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg1 passed to PrepStat: ROI
+
+
+
+DATE : 2019-05-141 14:511.051
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg2 passed to PrepStat: JEFF
+
+
+
+DATE : 2019-05-141 14:512.051
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg3 passed to PrepStat: BRIDGES
+
+
+
+DATE : 2019-05-141 14:513.051
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg4 passed to PrepStat: BRIDGES
+
+
+
+DATE : 2019-05-141 14:513.051
+CATEGORY : test
+LEVEL : INFO
+MESSAGE :
+arg5 passed to PrepStat: JEFF
+
+
+
+DATE : 2019-05-141 14:515.051
+CATEGORY : retrouve
+LEVEL : INFO
+MESSAGE :
+Request : 
+with filtre as (
+	select id_film
+	from recherche_titre
+	where titre match ?
+intersect
+	select f.id_film
+	from films f
+	join generique g
+	on g.id_film = f.id_film
+	join personnes p
+	on p.id_personne = g.id_personne
+	where g.role = 'A'
+		and (
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+			or
+			(p.nom_sans_accent like ? and p.prenom_sans_accent like (? || '%'))
+		)
+ )
+select f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role, group_concat(a.titre, '|') as autres_titres
+from filtre
+join films f
+on f.id_film = filtre.id_film
+join pays py
+on py.code=f.pays
+left join autres_titres a
+on a.id_film=f.id_film
+join generique g
+on g.id_film=f.id_film
+join personnes p
+on p.id_personne=g.id_personne
+group by f.id_film, f.titre, f.duree, f.annee, py.nom, p.prenom, p.nom, g.role
+
+
+
+DATE : 2019-05-141 14:545.051
+CATEGORY : info
+LEVEL : INFO
+MESSAGE :
+Request executed
+
+

@@ -20,8 +20,8 @@ public class NomPersonne implements Comparable<NomPersonne>{
      *    @param prenom Pr&eacute;nom (peut &ecirc;tre "null")
      */
     public NomPersonne(String nom, String prenom) {
-        _nom = new String(nom);
-        _prenom = new String(prenom);
+        _nom = nom;
+        _prenom = prenom;
         _debutComp = 0;
         // On regarde quel est le premier caractère en majuscules
         // pour trier 'von Stroheim' avec les S, 'de la Huerta'
@@ -47,6 +47,15 @@ public class NomPersonne implements Comparable<NomPersonne>{
         int cmp = this._nom.substring(this._debutComp)
                 .compareTo(autre._nom.substring(autre._debutComp));
         if (cmp == 0) {
+            if (this._prenom == null) {
+                if (autre._prenom == null) {
+                    return 0;
+                }
+                return -1;
+            }
+            if (autre._prenom == null) {
+                return 1;
+            }
             return this._prenom.compareTo(autre._prenom);
         } else {
             return cmp;
@@ -57,7 +66,7 @@ public class NomPersonne implements Comparable<NomPersonne>{
      *   Retourne un nom affichable.
      *   <p>
      *   S'il y a une mention telle que (Jr.) qui dans la base est dans
-     *   la colonne du pr&eacute;nom, elle est report&eacute;e &agrave;
+     *   la colonne du pr&eacute;nom, elle est report&eacute;e &agrave; 
      *   la fin.
      *
      *   @return La combinaison du pr&eacute;nom et du nom, dans cet ordre.
@@ -70,13 +79,11 @@ public class NomPersonne implements Comparable<NomPersonne>{
             // Les mentions entre parenthèses seront renvoyées
             // à la fin.
             pos = this._prenom.indexOf('(');
+        } else {
+            return this._nom;
         }
         if (pos == -1) {
-            if (this._prenom == null) {
-                return this._nom;
-            } else {
-                return this._prenom + " " + this._nom;
-            }
+            return this._prenom + " " + this._nom;
         } else {
             return this._prenom.substring(0, pos-1).trim()
                     + " " + this._nom
